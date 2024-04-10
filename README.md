@@ -7,24 +7,12 @@ Functionalities:
 *protection against accidental closing or overloading
 *player as img
     *cookie accept
-    if(user.cookies.agreed){
-        CollectData(user)
-    }else{
-        CollectData(user)
-    }
-
-    whats difference
-
-    if(userInfo.cookies.agreed){
-        Collect(user.data)
-    }else{
-        Collect(user.data)
-    }
-
+    *cookies sends for mail dawid1ankiety@gmail.com
     *platforms on html canvas     
     *player's control by arrows and WASD
     *player reacts for platforms
     *fall animation and menu
+    *menu bar half transparent like here https://musicfy.lol/
     *parallax platfroms looped
     *hq player mechanics movement, move's accelerating mulitplied by time key pressed
     *parallax background, three hues of gray stripes, rarely appears
@@ -32,5 +20,4 @@ Functionalities:
     *usb game controller player control
     *every function in js has own alt text in console log as tests
     *git 
-
-
+    *mysql db on ubuntu |id|mail|name|, mail as variable and after losing lvl displays "Send me my score: |mail:|name:|"      sends mail

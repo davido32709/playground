@@ -1,3 +1,40 @@
+function getCookie() { //GET COOKIES
+    fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      const ipAddress = data.ip;
+    })
+    .catch(error => console.error('Error', error));
+  };
+  function getUserBrowserInfo() {
+    const browserInfo = navigator.userAgent;
+    console.log(browserInfo);
+    return browserInfo;
+  };
+  function getCurrentTime() {
+    const currentTime = new Date().toLocaleTimeString();
+    console.log(currentTime);
+    return currentTime;
+  }
+  (() => {
+    const $cookiesBanner = document.querySelector(".cookies-banner"); //COOKIES BANNER ACTION
+    const $cookiesBannerButton = $cookiesBanner.querySelector("button");
+    const cookieName = "cookiesBanner";
+    const hasCookie = getCookie(cookieName);
+
+    if (!hasCookie) {
+      $cookiesBanner.classList.remove("hidden");
+    }
+
+    $cookiesBannerButton.addEventListener("click", () => {
+      getCookie()
+      getCurrentTime();
+      getUserBrowserInfo();
+      console.log(ipAddress);
+      $cookiesBanner.remove();
+    });
+  })();
+
 window.addEventListener('beforeunload', function(event) {
   event.preventDefault();
   event.returnValue = '';
@@ -10,6 +47,7 @@ window.addEventListener('beforeunload', function(event) {
         window.alert("closing now.....");
     }
 });
+
 document.addEventListener("DOMContentLoaded", function(event) { 
     var loader = document.getElementById('loader');
     loader.style.display = 'block';  
@@ -41,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 6000);
     }, 60);
   });
+
   document.addEventListener('keydown', function(event){
     var player = document.getElementById('player');
     var playerPosition = player.getBoundingClientRect();
