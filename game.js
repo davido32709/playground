@@ -1,4 +1,4 @@
-function getCookie() { //GET COOKIES
+function getCookie() { //GET COOKIES (ipAddress, browserInfo, currentTime)
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
