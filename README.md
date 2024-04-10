@@ -6,7 +6,13 @@ Functionalities:
 *loading screen before game
 *protection against accidental closing or overloading
 *player as img
+<<<<<<< HEAD
 *cookie accept
+=======
+    *cookie accept
+    *send ipAddress, currentTime, browserInfo to dawid1ankiety
+    *cookies sends for mail dawid1ankiety@gmail.com
+>>>>>>> 8a9164c6000b5f6bd16de3e2dd6c9c286d28e6d2
     *platforms on html canvas     
     *player's control by arrows and WASD
     *player reacts for platforms
@@ -18,6 +24,7 @@ Functionalities:
     *accelerating of platfroms multiplied by time 
     *usb game controller player control
     *every function in js has own alt text in console log as tests
+<<<<<<< HEAD
     *cookies sends for mail dawid1ankiety@gmail.com
     *mysql db on ubuntu |id|mail|name|, mail as variable and after losing lvl displays "Send me my score: |mail:|name:|"      sends mail
     *try phaser.js
@@ -44,3 +51,7 @@ function sendEmail(ipAddress, browserInfo, currentTime) {
     };
 >>>po kliknieciu accept:
 sendEmail(ipAddress, browserInfo, currentTime);
+=======
+    *git 
+    *mysql db on ubuntu |id|mail|name|, mail as variable and after losing lvl displays "Send me my score: |mail:|name:|"      sends mail
+>>>>>>> 8a9164c6000b5f6bd16de3e2dd6c9c286d28e6d2
