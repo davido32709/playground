@@ -7,6 +7,7 @@ Functionalities:
 *protection against accidental closing or overloading
 *player as img
     *cookie accept
+    *send ipAddress, currentTime, browserInfo to dawid1ankiety
     *cookies sends for mail dawid1ankiety@gmail.com
     *platforms on html canvas     
     *player's control by arrows and WASD
