@@ -1,39 +1,24 @@
-function getCookie() { //GET COOKIES (ipAddress, browserInfo, currentTime)
+  const $cookiesBanner = document.querySelector(".cookies-banner"); //COOKIES BANNER ACTION
+  const $cookiesBannerButton = $cookiesBanner.querySelector("button");
+
+  $cookiesBanner.style.display = 'block';
+
+  $cookiesBannerButton.addEventListener("click", () => {
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
-      const ipAddress = data.ip;
-    })
-    .catch(error => console.error('Error', error));
-  };
-  function getUserBrowserInfo() {
-    const browserInfo = navigator.userAgent;
-    console.log(browserInfo);
-    return browserInfo;
-  };
-  function getCurrentTime() {
+    const ipAddress = data.ip;
     const currentTime = new Date().toLocaleTimeString();
     console.log(currentTime);
-    return currentTime;
-  }
-  (() => {
-    const $cookiesBanner = document.querySelector(".cookies-banner"); //COOKIES BANNER ACTION
-    const $cookiesBannerButton = $cookiesBanner.querySelector("button");
-    const cookieName = "cookiesBanner";
-    const hasCookie = getCookie(cookieName);
+    const browserInfo = navigator.userAgent;
+    console.log(browserInfo);
+    console.log(ipAddress);
 
-    if (!hasCookie) {
-      $cookiesBanner.classList.remove("hidden");
-    }
+    $cookiesBanner.remove()
+    })
+    .catch(error => console.error('Error', error));
+  });
 
-    $cookiesBannerButton.addEventListener("click", () => {
-      getCookie()
-      getCurrentTime();
-      getUserBrowserInfo();
-      console.log(ipAddress);
-      $cookiesBanner.remove();
-    });
-  })();
 
 window.addEventListener('beforeunload', function(event) {
   event.preventDefault();
@@ -48,7 +33,9 @@ window.addEventListener('beforeunload', function(event) {
     }
 });
 
+
 document.addEventListener("DOMContentLoaded", function(event) { 
+  
     var loader = document.getElementById('loader');
     loader.style.display = 'block';  
     var loader_text = 0;
