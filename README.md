@@ -43,4 +43,8 @@ function sendEmail(ipAddress, browserInfo, currentTime) {
         `
     };
 po kliknieciu accept:
+<<<<<<< HEAD
 sendEmail(ipAddress, browserInfo, currentTime);
+=======
+sendEmail(ipAddress, browserInfo, currentTime);
+>>>>>>> 247dc6f21c4e207666e3819a583521850e1a013d

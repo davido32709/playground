@@ -1,9 +1,9 @@
-  const $cookiesBanner = document.querySelector(".cookies-banner"); //COOKIES BANNER ACTION
+  const $cookiesBanner = document.querySelector(".cookies-banner"); //DOM BANNER ACTION
   const $cookiesBannerButton = $cookiesBanner.querySelector("button");
 
   $cookiesBanner.style.display = 'block';
 
-  $cookiesBannerButton.addEventListener("click", () => {
+  $cookiesBannerButton.addEventListener("click", () => { //COOKIES ACCEPT
     fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
